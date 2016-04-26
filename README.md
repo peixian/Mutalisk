@@ -1,5 +1,6 @@
 # Ultralisk - Starcraft: Brood War Bot
 ![Ultralisk](ultralisk.png)
+
 *image from [Carbot][Carbot]*
 
 Ultralisk is a Starcraft: Brood War bot written in C++ on top of the [BWAPI][BWAPI] composed of two parts: 1) the actual AI (called Ultralisk) and 2) a neural network that creates stratagems (called Glaive). Using Glaive to decide on optimal build and unit composition after being trained on [replays][replays], Ultralisk seeks to accomplish a very modest goal of winning a majority of games against the built in Brood War AI. 
