@@ -38,12 +38,12 @@ TBD
 
 Roadmap:
 ---
-- [] Glaive build 0.0.1, **April 27** - Functioning Glaive, should be able to read and sufficiently analyze replays
-- [] Glaive build 0.1, **April 28** - Glaive should be able to generate and output responses to opponent's actions, should be ready to be implemented into mutalisk
-- [] Mutalisk build 0.0.1, **April 30** - Mutalisk should be a semi-functioning form, should exhibit the ability to follow various build commands and unit attacks
-- [] Mutalisk build 0.1, **May 1** - Mutalisk should be able to follow a specific build path, and be able to see what the opponent is building
-- [] Mutalisk build 0.2, **May 2** - Mutalisk should be able to read from Glaive outputs
-- [] Mutalisk build 0.3, **May 3** - Minimum Viable Product
+- [ ] Glaive build 0.0.1, **April 27** - Functioning Glaive, should be able to read and sufficiently analyze replays
+- [ ] Glaive build 0.1, **April 28** - Glaive should be able to generate and output responses to opponent's actions, should be ready to be implemented into mutalisk
+- [ ] Mutalisk build 0.0.1, **April 30** - Mutalisk should be a semi-functioning form, should exhibit the ability to follow various build commands and unit attacks
+- [ ] Mutalisk build 0.1, **May 1** - Mutalisk should be able to follow a specific build path, and be able to see what the opponent is building
+- [ ] Mutalisk build 0.2, **May 2** - Mutalisk should be able to read from Glaive outputs
+- [ ] Mutalisk build 0.3, **May 3** - Minimum Viable Product
 
 
 [BWAPI]: https://github.com/bwapi/bwapi
