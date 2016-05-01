@@ -1,0 +1,39 @@
+@relation pvt_581_lifetimes
+
+@attribute "unit_id" integer
+@attribute "type" string
+@attribute "gained" integer
+@attribute "lost" integer
+@attribute "completed" integer
+@attribute "observable" integer
+
+@data
+
+6,Protoss Probe,0,23827,0,0
+7,Protoss Probe,0,50884,0,0
+8,Protoss Probe,0,50884,0,0
+9,Protoss Probe,0,50884,0,0
+10,Protoss Nexus,0,50884,0,0
+155,Protoss Probe,6,46818,307,307
+157,Protoss Probe,346,4740,647,647
+159,Protoss Probe,648,50884,949,949
+161,Protoss Probe,950,50884,1251,1251
+163,Protoss Pylon,1215,50884,1736,1215
+164,Protoss Probe,1288,50884,1589,1589
+167,Protoss Probe,1736,50884,2037,2037
+168,Protoss Probe,2038,21944,2339,2339
+169,Protoss Probe,2340,50884,2641,2641
+171,Protoss Probe,2642,50884,2943,2943
+173,Protoss Probe,2944,50884,3245,3245
+175,Protoss Probe,3246,50884,3547,3547
+177,Protoss Probe,3548,50884,3849,3849
+179,Protoss Probe,3850,50884,4151,4151
+183,Protoss Probe,4741,50884,5042,5042
+189,Protoss Probe,21945,50884,22246,22246
+190,Protoss Probe,23828,50884,24129,24129
+191,Protoss Nexus,37303,50884,39174,37303
+192,Protoss Pylon,37584,50884,38105,37584
+193,Protoss Probe,38105,50884,38406,38406
+194,Protoss Probe,38407,50884,38708,38708
+195,Protoss Probe,38709,50884,39010,39010
+

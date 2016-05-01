@@ -1,0 +1,64 @@
+@relation pvt_450_lifetimes
+
+@attribute "unit_id" integer
+@attribute "type" string
+@attribute "gained" integer
+@attribute "lost" integer
+@attribute "completed" integer
+@attribute "observable" integer
+
+@data
+
+1,Protoss Probe,0,9661,0,0
+2,Protoss Probe,0,9661,0,0
+3,Protoss Probe,0,9661,0,0
+4,Protoss Probe,0,9661,0,0
+5,Protoss Nexus,0,9661,0,0
+32,Protoss Assimilator,2252,9661,2922,2252
+134,Protoss Probe,14,9661,315,315
+136,Protoss Probe,416,9661,717,717
+138,Protoss Probe,718,9661,1019,1019
+140,Protoss Probe,1020,9661,1321,1321
+141,Protoss Pylon,1248,9661,1769,1248
+143,Protoss Probe,1322,6394,1623,1623
+146,Protoss Probe,1769,9661,2070,2070
+147,Protoss Gateway,1922,9661,2893,1922
+149,Protoss Probe,2071,9661,2372,2372
+151,Protoss Probe,2373,9661,2674,2674
+153,Protoss Probe,2675,9661,2976,2976
+155,Protoss Probe,2977,9661,3278,3278
+156,Protoss Cybernetics Core,2984,9661,3955,2984
+158,Protoss Zealot,3194,9661,3795,3795
+160,Protoss Pylon,3472,9661,3993,3472
+161,Protoss Probe,3518,9661,3819,3819
+166,Protoss Probe,3993,9661,4294,4294
+168,Protoss Citadel of Adun,4236,9661,5207,4236
+169,Protoss Probe,4295,9661,4596,4596
+172,Protoss Gateway,4530,9661,5501,4530
+173,Protoss Probe,4597,9661,4898,4898
+176,Protoss Probe,4899,9661,5200,5200
+178,Protoss Pylon,4925,9661,5446,4925
+180,Protoss Probe,5201,9661,5502,5502
+181,Protoss Templar Archives,5226,9661,6197,5226
+184,Protoss Probe,5503,9661,5804,5804
+187,Protoss Probe,5805,9661,6106,6106
+188,Protoss Probe,6107,9661,6408,6408
+189,Protoss Dark Templar,6228,9661,6979,6979
+190,Protoss Dark Templar,6238,9661,6989,6989
+193,Protoss Nexus,6544,9661,8415,6544
+195,Protoss Probe,6618,9661,6919,6919
+197,Protoss Dark Templar,6980,9661,7731,7731
+199,Protoss Dark Templar,7008,9661,7759,7759
+203,Protoss Pylon,7350,9661,7871,7350
+208,Protoss Probe,7992,9661,8293,8293
+209,Protoss Nexus,8028,9661,-1,8028
+212,Protoss Probe,8294,9661,8595,8595
+215,Protoss Probe,8596,9661,8897,8897
+216,Protoss Stargate,8610,9661,-1,8610
+219,Protoss Probe,8840,9661,9141,9141
+220,Protoss Probe,8898,9661,9199,9199
+224,Protoss Probe,9200,9661,9501,9501
+225,Protoss Probe,9206,9661,9507,9507
+230,Protoss Probe,9502,9661,-1,-1
+231,Protoss Probe,9508,9661,-1,-1
+

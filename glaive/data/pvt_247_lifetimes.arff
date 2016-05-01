@@ -1,0 +1,86 @@
+@relation pvt_247_lifetimes
+
+@attribute "unit_id" integer
+@attribute "type" string
+@attribute "gained" integer
+@attribute "lost" integer
+@attribute "completed" integer
+@attribute "observable" integer
+
+@data
+
+1,Protoss Probe,0,12601,0,0
+2,Protoss Probe,0,12601,0,0
+3,Protoss Probe,0,12601,0,0
+4,Protoss Probe,0,12601,0,0
+5,Protoss Nexus,0,12601,0,0
+82,Protoss Assimilator,2322,12601,2992,2322
+115,Protoss Probe,6,12601,307,307
+117,Protoss Probe,370,12601,671,671
+119,Protoss Probe,672,12601,973,973
+121,Protoss Probe,974,12601,1275,1275
+122,Protoss Pylon,1179,12601,1700,1179
+124,Protoss Probe,1276,12601,1577,1577
+127,Protoss Probe,1700,12601,2001,2001
+128,Protoss Gateway,1852,12601,2823,1852
+130,Protoss Probe,2002,12601,2303,2303
+133,Protoss Probe,2304,12601,2605,2605
+135,Protoss Probe,2606,12601,2907,2907
+137,Protoss Probe,2908,12601,3209,3209
+138,Protoss Cybernetics Core,3027,12601,3998,3027
+140,Protoss Probe,3210,12601,3511,3511
+142,Protoss Pylon,3350,12601,3871,3350
+144,Protoss Probe,3512,12601,3813,3813
+148,Protoss Probe,3814,12601,4115,4115
+149,Protoss Dragoon,4008,10048,4759,4759
+151,Protoss Probe,4232,12601,4533,4533
+153,Protoss Probe,4534,12601,4835,4835
+154,Protoss Gateway,4632,12601,5603,4632
+157,Protoss Probe,4862,12601,5163,5163
+160,Protoss Pylon,5020,12601,5541,5020
+162,Protoss Dragoon,5376,10076,6127,6127
+163,Protoss Probe,5406,12601,5707,5707
+165,Protoss Dragoon,5612,9827,6363,6363
+166,Protoss Probe,5708,12601,6009,6009
+169,Protoss Pylon,6070,12601,6591,6070
+170,Protoss Dragoon,6128,12601,6879,6879
+171,Protoss Probe,6168,12601,6469,6469
+173,Protoss Dragoon,6364,10112,7115,7115
+175,Protoss Robotics Facility,6650,12601,7921,6650
+177,Protoss Probe,6728,12601,7029,7029
+179,Protoss Dragoon,6880,9897,7631,7631
+183,Protoss Dragoon,7116,9960,7867,7867
+185,Protoss Pylon,7230,12601,7751,7230
+189,Protoss Zealot,7728,10971,8329,8329
+191,Protoss Probe,7766,12601,8067,8067
+194,Protoss Zealot,7868,11827,8469,8469
+195,Protoss Shuttle,7944,11294,8845,8845
+197,Protoss Robotics Support Bay,8099,12601,8620,8099
+200,Protoss Pylon,8232,12601,8753,8232
+204,Protoss Dragoon,8572,12601,9323,9323
+208,Protoss Dragoon,8610,12601,9361,9361
+212,Protoss Reaver,8888,11372,9939,9939
+217,Protoss Dragoon,9324,12601,10075,10075
+219,Protoss Observatory,9406,12601,9927,9406
+220,Protoss Dragoon,9572,12601,10323,10323
+222,Protoss Pylon,9630,12601,10151,9630
+225,Protoss Dragoon,10130,12601,10881,10881
+226,Protoss Scarab,10564,10584,10564,10564
+230,Protoss Scarab,10427,10451,10427,10427
+232,Protoss Dragoon,10324,12601,11075,11075
+233,Protoss Scarab,10495,10511,10495,10495
+236,Protoss Scarab,10627,10647,10627,10627
+237,Protoss Scarab,11353,11414,11353,11353
+238,Protoss Scarab,11272,11346,11272,11272
+242,Protoss Probe,10770,12601,11071,11071
+243,Protoss Scarab,10952,10967,10952,10952
+245,Protoss Scarab,11024,11048,11024,11024
+247,Protoss Probe,11072,12601,11373,11373
+248,Protoss Dragoon,11084,12601,11835,11835
+249,Protoss Dragoon,11088,12601,11839,11839
+253,Protoss Shuttle,11480,12601,12381,12381
+254,Protoss Probe,11534,12601,11835,11835
+257,Protoss Dragoon,11836,12601,-1,-1
+258,Protoss Dragoon,11840,12601,-1,-1
+261,Protoss Nexus,11982,12601,-1,11982
+

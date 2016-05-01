@@ -1,0 +1,56 @@
+@relation pvt_646_lifetimes
+
+@attribute "unit_id" integer
+@attribute "type" string
+@attribute "gained" integer
+@attribute "lost" integer
+@attribute "completed" integer
+@attribute "observable" integer
+
+@data
+
+1,Protoss Probe,0,15981,0,0
+2,Protoss Probe,0,30469,0,0
+3,Protoss Probe,0,2215,0,0
+4,Protoss Probe,0,30469,0,0
+5,Protoss Nexus,0,30469,0,0
+155,Protoss Probe,6,30469,307,307
+157,Protoss Probe,368,30469,669,669
+159,Protoss Probe,670,30469,971,971
+161,Protoss Probe,972,30469,1273,1273
+163,Protoss Pylon,1176,30469,1697,1176
+165,Protoss Probe,1488,30469,1789,1789
+167,Protoss Probe,1928,30469,2229,2229
+169,Protoss Probe,2230,30469,2531,2531
+170,Protoss Probe,2736,30469,3037,3037
+171,Protoss Probe,3038,30469,3339,3339
+172,Protoss Probe,3340,30469,3641,3641
+173,Protoss Probe,3648,30469,3949,3949
+174,Protoss Probe,3950,30469,4251,4251
+175,Protoss Probe,4252,30469,4553,4553
+176,Protoss Probe,4554,30469,4855,4855
+177,Protoss Nexus,8086,30469,9957,8086
+178,Protoss Pylon,8256,30469,8777,8256
+179,Protoss Probe,8777,30469,9078,9078
+180,Protoss Probe,9079,30469,9380,9380
+181,Protoss Probe,9381,30469,9682,9682
+182,Protoss Probe,9683,30469,9984,9984
+183,Protoss Probe,9985,30469,10286,10286
+185,Protoss Probe,10287,30469,10588,10588
+186,Protoss Probe,10589,30469,10890,10890
+188,Protoss Probe,10891,30469,11192,11192
+191,Protoss Probe,11193,30469,11494,11494
+193,Protoss Probe,11495,30469,11796,11796
+195,Protoss Probe,11797,30469,12098,12098
+197,Protoss Probe,12099,30469,12400,12400
+199,Protoss Probe,12401,30469,12702,12702
+201,Protoss Probe,12703,30469,13004,13004
+203,Protoss Probe,13005,30469,13306,13306
+205,Protoss Probe,13307,30469,13608,13608
+207,Protoss Probe,13609,13735,-1,-1
+214,Protoss Pylon,18020,30469,18541,18020
+215,Protoss Probe,18902,30469,19203,19203
+216,Protoss Probe,19204,30469,19505,19505
+217,Protoss Probe,19828,30469,20129,20129
+219,Protoss Probe,20130,30469,20431,20431
+

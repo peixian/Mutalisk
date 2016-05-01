@@ -1,0 +1,66 @@
+@relation pvt_503_lifetimes
+
+@attribute "unit_id" integer
+@attribute "type" string
+@attribute "gained" integer
+@attribute "lost" integer
+@attribute "completed" integer
+@attribute "observable" integer
+
+@data
+
+57,Protoss Assimilator,2512,9826,3182,2512
+81,Protoss Probe,0,9826,0,0
+85,Protoss Probe,0,9826,0,0
+108,Protoss Nexus,0,9826,0,0
+113,Protoss Probe,0,9826,0,0
+124,Protoss Probe,0,9826,0,0
+133,Protoss Probe,6,5591,307,307
+135,Protoss Probe,366,9826,667,667
+137,Protoss Probe,668,7238,969,969
+139,Protoss Probe,970,9826,1271,1271
+141,Protoss Pylon,1191,9826,1712,1191
+142,Protoss Probe,1318,9826,1619,1619
+146,Protoss Probe,1712,9826,2013,2013
+147,Protoss Gateway,1916,9826,2887,1916
+149,Protoss Probe,2066,9826,2367,2367
+152,Protoss Probe,2368,9826,2669,2669
+154,Protoss Probe,2670,9826,2971,2971
+156,Protoss Probe,2972,9826,3273,3273
+158,Protoss Cybernetics Core,3124,9826,4095,3124
+160,Protoss Probe,3274,9826,3575,3575
+162,Protoss Pylon,3465,9826,3986,3465
+164,Protoss Probe,3576,9826,3877,3877
+167,Protoss Probe,3878,9826,4179,4179
+169,Protoss Dragoon,4148,9622,4899,4899
+170,Protoss Probe,4180,9826,4481,4481
+173,Protoss Probe,4482,9826,4783,4783
+175,Protoss Pylon,4624,9826,5145,4624
+177,Protoss Probe,4824,9826,5125,5125
+182,Protoss Citadel of Adun,5169,9826,6140,5169
+183,Protoss Dragoon,5266,8592,6017,6017
+185,Protoss Probe,5334,9826,5635,5635
+189,Protoss Gateway,5665,9826,6636,5665
+190,Protoss Probe,5770,9826,6071,6071
+193,Protoss Dragoon,6018,9496,6769,6769
+195,Protoss Templar Archives,6158,9826,7129,6158
+197,Protoss Pylon,6298,9826,6819,6298
+198,Protoss Probe,6340,9826,6641,6641
+200,Protoss Zealot,6656,7592,7257,7257
+201,Protoss Probe,6688,9826,6989,6989
+203,Protoss Zealot,6770,8396,7371,7371
+205,Protoss Probe,6990,9826,7291,7291
+208,Protoss Dark Templar,7258,9826,8009,8009
+210,Protoss Probe,7334,9826,7635,7635
+213,Protoss Dark Templar,7372,9826,8123,8123
+217,Protoss Probe,7868,9826,8169,8169
+222,Protoss Dark Templar,8140,9826,8891,8891
+223,Protoss Dark Templar,8146,9826,8897,8897
+225,Protoss Pylon,8250,9826,8771,8250
+227,Protoss Probe,8397,9826,8698,8698
+236,Protoss Dragoon,9178,9826,-1,-1
+237,Protoss Dragoon,9182,9826,-1,-1
+239,Protoss Probe,9248,9826,9549,9549
+243,Protoss Probe,9550,9826,-1,-1
+244,Protoss Nexus,9670,9826,-1,9670
+

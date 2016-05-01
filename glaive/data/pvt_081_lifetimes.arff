@@ -1,0 +1,46 @@
+@relation pvt_081_lifetimes
+
+@attribute "unit_id" integer
+@attribute "type" string
+@attribute "gained" integer
+@attribute "lost" integer
+@attribute "completed" integer
+@attribute "observable" integer
+
+@data
+
+1,Protoss Probe,0,8120,0,0
+2,Protoss Probe,0,8448,0,0
+3,Protoss Probe,0,8448,0,0
+4,Protoss Probe,0,8448,0,0
+5,Protoss Nexus,0,8448,0,0
+102,Protoss Assimilator,2385,8448,3055,2385
+156,Protoss Probe,6,6184,307,307
+158,Protoss Probe,396,6908,697,697
+160,Protoss Probe,698,8448,999,999
+162,Protoss Probe,1000,3689,1301,1301
+164,Protoss Pylon,1218,6670,1739,1218
+165,Protoss Probe,1302,8436,1603,1603
+168,Protoss Probe,1739,6488,2040,2040
+169,Protoss Gateway,1887,5816,2858,1887
+171,Protoss Probe,2041,3831,2342,2342
+173,Protoss Probe,2343,8288,2644,2644
+175,Protoss Probe,2645,3876,2946,2946
+178,Protoss Probe,2947,6458,3248,3248
+179,Protoss Cybernetics Core,2998,8448,3969,2998
+181,Protoss Probe,3249,3383,-1,-1
+184,Protoss Pylon,3327,8448,3848,3327
+185,Protoss Zealot,3410,5089,4011,4011
+188,Protoss Dragoon,4012,8448,4763,4763
+189,Protoss Probe,4160,8448,4461,4461
+197,Protoss Dragoon,5202,5817,-1,-1
+199,Protoss Shield Battery,5413,8448,5934,5413
+200,Protoss Gateway,5521,8448,6492,5521
+204,Protoss Pylon,5943,8448,6464,5943
+208,Protoss Dragoon,6584,8448,7335,7335
+209,Protoss Pylon,6754,8448,7275,6754
+214,Protoss Dragoon,7336,8448,8087,8087
+215,Protoss Probe,7432,8202,7733,7733
+219,Protoss Dragoon,8168,8448,-1,-1
+221,Protoss Probe,8348,8448,-1,-1
+
