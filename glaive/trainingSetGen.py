@@ -17,6 +17,7 @@ class TrainingSetGen:
         self.maxY = 690
     
     def writeOut(self):
+        """Writes out random ally and enemy positions, returns them"""
         #Map Limitations are 0-1280 for x, and 0-720 for y
         with open("unitPos.txt", "w+") as expFile:
             outFormat = "{} {} {} {}\n"
@@ -36,6 +37,17 @@ class TrainingSetGen:
                 expFile.write(outFormat.format(self.enemy[0], self.enemy[1], x, y))
         return allyPositions, enemyPositions
     
+    def writeEnemyPositions(self):
+        """Writes out random enemy positions and returns them"""
+        with open("unitPos.txt") as expFile:
+            outFormat = "{} {} {} {}\n"
+            for i in range(self.enemy[2]*self.unitCount):
+                x = np.random.randint(self.maxX/4, 3*self.maxX/4)
+                y = np.random.randint(self.maxY/4, 3*self.maxY/4)
+                enemyPositions.append((x, y))
+                expFile.write(outFormat.format(self.enemy[0], self.enemy[1], x, y))
+        return enemyPositions
+
     
 
     
