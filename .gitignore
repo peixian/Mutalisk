@@ -25,3 +25,4 @@ node_modules
 glaive/exp_results_raw.txt
 glaive/exp_config.txt
 glaive/goodAllyPositions.txt
+glaive/exp_results_summary.txt

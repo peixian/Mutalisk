@@ -1,4 +1,0 @@
-Player 0 NOKDPS
-Player 1 NOKDPS
-State StateDescriptionFile 10 experiment.txt
-ResultsFile exp_results falseDisplay false starcraft_images\

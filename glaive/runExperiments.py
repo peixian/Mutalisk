@@ -32,10 +32,17 @@ def makeTrainingDataset():
 	        if (float(summary.readline().strip()) > .5):
 	            goodAllyPositions.append(allyPositions)
 	            goodEnemyPositions.append(enemyPositions)
-	            
-	with open("goodAllyPositions.txt", "w") as out:
-	    for item in goodAllyPositions:
-	        out.write("{}\n".format(item))
-	with open("goodEnemyPositions.txt", "w") as out:
-	    for item in goodEnemyPositions:
-	        out.write("{}\n".format(item))
+	
+	return goodAllyPositions, goodEnemyPositions             
+	# with open("goodAllyPositions.txt", "w") as out:
+	#     for item in goodAllyPositions:
+	#         out.write("{}\n".format(item))
+	# with open("goodEnemyPositions.txt", "w") as out:
+	#     for item in goodEnemyPositions:
+	#         out.write("{}\n".format(item))
+
+def makeTestDataset():
+	"""Makes a random enemy positions"""
+	sample = trainingSetGen.TrainingSetGen()
+	enemyPositions = sample.writeEnemyPositions()
+	return enemyPositions
