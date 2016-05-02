@@ -39,8 +39,9 @@ class TrainingSetGen:
     
     def writeEnemyPositions(self):
         """Writes out random enemy positions and returns them"""
-        with open("unitPos.txt") as expFile:
+        with open("unitPos.txt", "w+") as expFile:
             outFormat = "{} {} {} {}\n"
+            enemyPositions = []
             for i in range(self.enemy[2]*self.unitCount):
                 x = np.random.randint(self.maxX/4, 3*self.maxX/4)
                 y = np.random.randint(self.maxY/4, 3*self.maxY/4)

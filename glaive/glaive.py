@@ -11,6 +11,8 @@ from pybrain.datasets import SupervisedDataSet
 from pybrain.supervised.trainers import BackpropTrainer
 from pybrain.structure import TanhLayer
 from pybrain.tools.shortcuts import buildNetwork
+from pybrain.tools.xml.networkwriter import NetworkWriter
+from pybrain.tools.xml.networkreader import NetworkReader
 
 def lossCalculation(model):
     """Evaluates the total loss on the dataset"""
@@ -43,6 +45,6 @@ for inpt, target in ds:
 net = buildNetwork(nn_input_dim, 10, nn_output_dim, bias=True, hiddenclass=TanhLayer)
 trainer = BackpropTrainer(net, ds)
 trainer.trainUntilConvergence()
-
+NetworkWriter.writeToFile(net, "net.xml")
 enemyTestPos = runExperiments.makeTestDataset()
-print(net.activate(enemyTestPos))
+print(net.activate(normalize([x for posPair in enemyTestPos for x in posPair])))
