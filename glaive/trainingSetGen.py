@@ -14,7 +14,7 @@ class TrainingSetGen:
         self.enemy = ["Terran_Marine", 1, 1]
         self.unitCount = 3
         self.maxX = 1280
-        self.maxY = 720
+        self.maxY = 690
     
     def writeOut(self):
         #Map Limitations are 0-1280 for x, and 0-720 for y
@@ -34,7 +34,7 @@ class TrainingSetGen:
                 y = np.random.randint(self.maxY/4, 3*self.maxY/4)
                 enemyPositions.append((x, y))
                 expFile.write(outFormat.format(self.enemy[0], self.enemy[1], x, y))
-
+        return allyPositions, enemyPositions
     
     
 
