@@ -7,56 +7,20 @@ import pprint
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def readData(maxReplayCount = 749):
-    """reads the data from .arff files (Weka Attribute-Relation files)
+def lossCalculation(model):
+    """Evaluates the total loss on the dataset"""
+    w1, b1, w2, b2 = model["w1"], model['b1'], model["w2"], model["b2"]
     
-    maxReplayCount is <= 749
+    z1 = X.dot
     
-    returns:
-    data - a list of dataframes containing replay build orders of the first 100 actions, indexed as ['frame', 'action', 'actionNumber']
-    """
-    filename = "data/pvt_{}_lifetimes.arff"
-    range = np.arange(1, maxReplayCount)
-    
-    data = []
-    buildList = set([])
-    for replay in range:
-        replayName = filename.format(str(replay).zfill(3))
-        if (os.path.isfile(replayName)):
-            with open(replayName, "r") as file:
-                #read, strip, and remove unnecessary data
-                lines = map(lambda x: x.rstrip().split(",")[:2], file.readlines()[11:111])
-                #make and add a dataframe
-                df = pd.DataFrame(lines, columns=("frame", "action"))
-                df = df[df.frame != ""]
-                df["frame"] = df["frame"].map(lambda x: int(x))
-                df["action"] = df["action"].map(lambda x: str(x).replace("Protoss ", "").replace(" ", "_"))
-                for action in list(df["action"].unique()):
-                    buildList.add(action)
-                data.append(df)
-    
-    # print(data)
-    # print(type(data))
-    # buildList = map(lambda x: list(x["action"].unique()), data)
-    buildList = list(buildList)
-    for df in data:
-        df["actionNumber"] = df["action"].map(lambda x: buildList.index(x))
-    return data, buildList
-    
-    
-def createVectors(data):
-    """iterates through data and creates a list of vectors of ['frame', 'buildID']
-    refer to buildList for buildID
-    """
-    vec = []
-    for df in data:
-        subset = df[["frame", "actionNumber"]]
-        vec.append(subset.values)
-    vec = [item for sublist in vec for item in sublist]
-    return vec
+def predict(model, x):
+    """predicts an outputs a decision"""
+    pass
 
-data, buildList = readData()
-vectors = createVectors(data)
-plt.scatter(*zip(*vectors))
-plt.show()
-# pprint.pprint(vectors)
+#CONSTANTS
+nn_input_dim = 8 #[Ally Units, Enemy Units, x_enemy1, y_enemy1, x_enemy2, y_enemy2, x_enemy3, y_enemy3]
+nn_output_dim = 6 #[x_ally1, y_ally1, x_ally2, y_ally2, x_ally3, y_ally3]
+
+#Gradient Descent 
+epsilon = 0.01
+reg_lambda = 0.01
