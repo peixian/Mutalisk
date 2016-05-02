@@ -1,9 +1,4 @@
-Zerg_Zergling 0 18 584
-Zerg_Zergling 0 28 202
-Zerg_Zergling 0 40 279
-Zerg_Zergling 0 203 610
-Zerg_Zergling 0 505 504
-Zerg_Zergling 0 120 617
-Zerg_Zergling 0 439 450
-Zerg_Zergling 0 742 454
-Zerg_Zergling 0 516 309
+Player 0 NOKDPS
+Player 1 NOKDPS
+State StateDescriptionFile 10 experiment.txt
+ResultsFile exp_results falseDisplay false starcraft_images\

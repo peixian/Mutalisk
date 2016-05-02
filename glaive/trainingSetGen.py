@@ -18,7 +18,7 @@ class TrainingSetGen:
     
     def writeOut(self):
         #Map Limitations are 0-1280 for x, and 0-720 for y
-        with open("experiment.txt", "w+") as expFile:
+        with open("unitPos.txt", "w+") as expFile:
             outFormat = "{} {} {} {}\n"
             #player 0 positions are between (0-640, 0-720)
             allyPositions = []

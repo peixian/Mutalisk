@@ -135,7 +135,7 @@ class NN:
         for j in range(self.nh):
             print(self.wo[j])
 
-    def train(self, patterns, iterations=1000, N=0.5, M=0.1):
+    def train(self, patterns, iterations=1000, N=0.01, M=0.01):
         # N: learning rate
         # M: momentum factor
         for i in range(iterations):
@@ -152,14 +152,11 @@ class NN:
 def demo():
     # Teach network XOR function
     pat = [
-        [[0,0], [0]],
-        [[0,1], [1]],
-        [[1,0], [1]],
-        [[1,1], [0]]
+        [[6,3, 894/1280.0, 524/720.0, 806/1280.0, 188/720.0, 577/1280.0, 386/720.0], [450/640.0, 481/720.0, 512/640.0, 74/720.0, 423/640.0, 215/720.0, 393/640.0, 276/720.0, 549/640.0, 516/720.0, 141/640.0, 598/720.0]],
     ]
 
     # create a network with two input, two hidden, and one output nodes
-    n = NN(8, 2, 6)
+    n = NN(8, 20, 12)
     # train it with some patterns
     n.train(pat)
     # test it
