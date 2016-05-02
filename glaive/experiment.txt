@@ -1,5 +1,5 @@
 Player 0 NOKDPS
 Player 1 NOKDPS
-State StateDescriptionFile 10 experiment.txt
+State StateDescriptionFile 10 unitPos.txt
 ResultsFile exp_results false
 Display false starcraft_images\

@@ -15,5 +15,6 @@ with open("experiment.txt", "w") as exp:
     
     exp.write("Display false starcraft_images\\")
 
-subprocess.check_call(["cd C:\\sparcraft"])
-subprocess.check_call(["Sparcraft.exe", "experiment.txt"])
+subprocess.check_call(["C:\\sparcraft\Sparcraft.exe", "experiment.txt"])
+# subprocess.check_call([""])
+# with open("")
