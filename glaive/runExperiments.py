@@ -27,4 +27,9 @@ for i in range(0, 100):
             goodAllyPositions.append(allyPositions)
             goodEnemyPositions.append(enemyPositions)
             
-print(goodAllyPositions)
+with open("goodAllyPositions.txt", "w") as out:
+    for item in goodAllyPositions:
+        out.write("{}\n".format(item))
+with open("goodEnemyPositions.txt", "w") as out:
+    for item in goodEnemyPositions:
+        out.write("{}\n".format(item))

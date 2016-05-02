@@ -10,7 +10,7 @@ def distance(x, y, maxX, maxY):
 class TrainingSetGen:
     def __init__(self):        
         #[Unit name(s), player number, unitMultiplyer]
-        self.ally = ["Zerg_Zergling", 0, 4/3]
+        self.ally = ["Zerg_Zergling", 0, 1]
         self.enemy = ["Terran_Marine", 1, 1]
         self.unitCount = 3
         self.maxX = 1280
