@@ -25,26 +25,32 @@ def normalize(lst):
 	s = float(sum(lst))
 	return [v/s for v in lst]
 
-#CONSTANTS
-nn_input_dim = 6 #[x_enemy1, y_enemy1, x_enemy2, y_enemy2, x_enemy3, y_enemy3]
-nn_output_dim = 6 #[x_ally1, y_ally1, x_ally2, y_ally2, x_ally3, y_ally3]
+def createNet():
+	"""Create and seed the intial neural network"""
+	#CONSTANTS
+	nn_input_dim = 6 #[x_enemy1, y_enemy1, x_enemy2, y_enemy2, x_enemy3, y_enemy3]
+	nn_output_dim = 6 #[x_ally1, y_ally1, x_ally2, y_ally2, x_ally3, y_ally3]
 
-allyTrainingPos, enemyTrainingPos = runExperiments.makeTrainingDataset()
+	allyTrainingPos, enemyTrainingPos = runExperiments.makeTrainingDataset()
 
-ds = SupervisedDataSet(nn_input_dim, nn_output_dim)
+	ds = SupervisedDataSet(nn_input_dim, nn_output_dim)
 
-#normalizes and adds it to the dataset
-for i in range(0, len(allyTrainingPos)):
-	x = normalize([x for posPair in enemyTrainingPos[i] for x in posPair])
-	y = normalize([y for posPair in allyTrainingPos[i] for y in posPair])
-	ds.addSample(x, y)
+	#normalizes and adds it to the dataset
+	for i in range(0, len(allyTrainingPos)):
+		x = normalize([x for posPair in enemyTrainingPos[i] for x in posPair])
+		y = normalize([y for posPair in allyTrainingPos[i] for y in posPair])
+		ds.addSample(x, y)
 
-for inpt, target in ds:
-	print inpt, target
+	for inpt, target in ds:
+		print inpt, target
 
-net = buildNetwork(nn_input_dim, 10, nn_output_dim, bias=True, hiddenclass=TanhLayer)
-trainer = BackpropTrainer(net, ds)
-trainer.trainUntilConvergence()
-NetworkWriter.writeToFile(net, "net.xml")
-enemyTestPos = runExperiments.makeTestDataset()
-print(net.activate(normalize([x for posPair in enemyTestPos for x in posPair])))
+	net = buildNetwork(nn_input_dim, 10, nn_output_dim, bias=True, hiddenclass=TanhLayer)
+	trainer = BackpropTrainer(net, ds)
+	trainer.trainUntilConvergence()
+	NetworkWriter.writeToFile(net, "net.xml")
+	enemyTestPos = runExperiments.makeTestDataset()
+	print(net.activate(normalize([x for posPair in enemyTestPos for x in posPair])))
+
+def startTrials():
+	enemyTestPos = runExperiments.makeTestDataset()
+	
