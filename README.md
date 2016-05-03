@@ -31,8 +31,6 @@ Implementation Details
 - Interaction & Analysis - SparCraft generates combat data for analysis, and Brood War generates replays
 
 
-
-
 Roadmap:
 ---
 - [x] Glaive build 0.0.1 - **April 27** - Functioning Glaive, should be able to read and sufficiently analyze replays

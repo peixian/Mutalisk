@@ -26,6 +26,15 @@ Hypothesis
 ----
 By limiting Ultralisk to a small subset of units (melee ground units called Zerglings), Ultralisk should be able to find accurate deployment positions for its units.
 
+Implementation Details
+-----
+- Agent - Ultralisk itself is an agent that interacts directly with the Starcraft: Brood War environment, through knowledge gained from Glaive.
+- Environment - The Brood War gameplay environment along with the SparCraft environment
+- Sensors - `CompleteMapInformation` will be enabled to avoid writing a complete scouting bot (this is definitely cheating the game a bit, possibly revisit this later on)
+- Actions - Ultralisk itself has access to all actions a normal player would, which is to mine minerals, acquire gas, build units, etc. 
+- Controller - The controller will be information created by Glaive itself, passed into [UAlbertaBot][UAlbertaBot]
+- Interaction & Analysis - SparCraft generates combat data for analysis, and Brood War generates replays
+
 Experimental Design
 ----
 A map of size `1280 x 720` is created, where the left half is deployable by Ultralisk and the right half is deployable by the computer, as shown below:
