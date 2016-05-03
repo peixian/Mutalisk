@@ -1,6 +1,5 @@
 import subprocess
 import trainingSetGen
-import glaiveNN
 import pybrain
 
 def makeTrainingDataset():
@@ -14,7 +13,7 @@ def makeTrainingDataset():
 	    
 	    #writes the experiment launch file, see documentation @ https://github.com/davechurchill/ualbertabot/wiki/SparCraft-Simulation-Settings
 	    with open("experiment.txt", "w") as exp:
-	        expStates = 10
+	        expStates = 2
 	        exp.write("Player 0 NOKDPS\nPlayer 1 NOKDPS\n")
 	        #write out experiment count
 	        exp.write("State StateDescriptionFile {} unitPos.txt\n".format(expStates))
@@ -46,3 +45,13 @@ def makeTestDataset():
 	sample = trainingSetGen.TrainingSetGen()
 	enemyPositions = sample.writeEnemyPositions()
 	return enemyPositions
+
+def writeTestData(allyPositions):
+	"""Writes the data into the unitPos.txt file"""
+	sample = trainingSetGen.TrainingSetGen()
+	allyPositions = sample.writeAllyPositions(allyPositions)
+	return allyPositions
+
+def run(times = 2):
+	for i in range(times):
+		subprocess.check_call(["C:\\sparcraft\Sparcraft.exe", "experiment.txt"])

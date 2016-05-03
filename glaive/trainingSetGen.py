@@ -49,6 +49,13 @@ class TrainingSetGen:
                 expFile.write(outFormat.format(self.enemy[0], self.enemy[1], x, y))
         return enemyPositions
 
+    def writeAllyPositions(self, allyPositions):
+        with open("unitPos.txt", "a") as expFile:
+            outFormat = "{} {} {} {}\n"
+            for allyPos in allyPositions:
+                expFile.write(outFormat.format(self.ally[0], self.ally[1], allyPos[0], allyPos[1]))
+        return allyPositions
+
     
 
     

@@ -21,9 +21,9 @@ def lossCalculation(model):
     z1 = X.dot
     
 def normalize(lst):
-	"""Normalizes the list"""
-	s = float(sum(lst))
-	return [v/s for v in lst]
+	"""Normalizes the list, reducing the x by 640 and y by 720"""
+	normed = map(lambda p: (p[0]/640.0, p[1]/720.0), lst)
+	return normed
 
 def createNet():
 	"""Create and seed the intial neural network"""
@@ -37,20 +37,57 @@ def createNet():
 
 	#normalizes and adds it to the dataset
 	for i in range(0, len(allyTrainingPos)):
-		x = normalize([x for posPair in enemyTrainingPos[i] for x in posPair])
-		y = normalize([y for posPair in allyTrainingPos[i] for y in posPair])
+		x = normalize(enemyTrainingPos[i])
+		y = normalize(allyTrainingPos[i])
+		x = [val for pair in x for val in pair]
+		y = [val for pair in y for val in pair]
 		ds.addSample(x, y)
 
 	for inpt, target in ds:
 		print inpt, target
 
-	net = buildNetwork(nn_input_dim, 10, nn_output_dim, bias=True, hiddenclass=TanhLayer)
+	net = buildNetwork(nn_input_dim, 30, nn_output_dim, bias=True, hiddenclass=TanhLayer)
 	trainer = BackpropTrainer(net, ds)
 	trainer.trainUntilConvergence()
 	NetworkWriter.writeToFile(net, "net.xml")
 	enemyTestPos = runExperiments.makeTestDataset()
-	print(net.activate(normalize([x for posPair in enemyTestPos for x in posPair])))
+	print(net.activate([val for pair in normalize(enemyTestPos) for val in pair]))
+	return ds
 
-def startTrials():
-	enemyTestPos = runExperiments.makeTestDataset()
-	
+def startTrials(ds, maxTrials = 2, maxExperiments = 2):
+	"""start and run the trials"""
+	hpCount = []
+	for i in range(0, maxExperiments):
+		for j in range(0, maxTrials):
+			enemyTestPos = runExperiments.makeTestDataset()
+			net = NetworkReader.readFrom("net.xml")
+
+			netResults = net.activate([val for pair in normalize(enemyTestPos) for val in pair])
+			netIter = iter(netResults)
+			allyTestPos = zip(netIter, netIter)
+			#undo normalization
+			allyTestPos = map(lambda p: (abs(p[0]*640), abs(p[1]*720)), allyTestPos)
+			print(allyTestPos)
+			runExperiments.writeTestData(allyTestPos)
+			runExperiments.run()
+
+			with open("exp_results_raw.txt", "r") as resultsFile:
+				lines = resultsFile.readlines()
+				if "Zerg_Zergling" in lines[1]:
+					x = normalize(enemyTestPos)
+					y = normalize(allyTestPos)
+					x = [val for pair in x for val in pair]
+					y = [val for pair in y for val in pair]
+					ds.addSample(x, y)
+					lineSplit = lines[1].split("Zerg_Zergling")[-1]
+					hpCount.append(lineSplit.split(" ")[2])
+		trainer = BackpropTrainer(net, ds)
+		trainer.trainEpochs(20)
+	return hpCount
+
+ds = createNet()
+hpCount = startTrials(ds, 30, 10)
+print(hpCount)
+fig, ax = plt.subplots()
+ax.plot(range(0, len(hpCount)),hpCount)
+plt.show()
