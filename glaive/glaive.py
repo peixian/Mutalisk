@@ -82,7 +82,7 @@ def startTrials(ds, maxTrials = 2, maxExperiments = 2):
 					lineSplit = lines[1].split("Zerg_Zergling")[-1]
 					hpCount.append(lineSplit.split(" ")[2])
 		trainer = BackpropTrainer(net, ds)
-		trainer.trainEpochs(20)
+        trainer.trainUntilConvergence()
 	return hpCount
 
 ds = createNet()

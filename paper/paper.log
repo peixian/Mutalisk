@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 MAY 2016 19:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 MAY 2016 20:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -418,21 +418,25 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@storecount=\count113
 \c@ALG@tmpcounter=\count114
 \ALG@tmplength=\skip52
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 \c@lstlisting=\count115
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -497,25 +501,25 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 33.
+(Font)              <7> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 33.
+(Font)              <5> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 33.
+(Font)              <8> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 33.
+(Font)              <6> on input line 34.
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 []\OT1/cmr/m/n/10 This combat-oriented do-main of micro-
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 35--36
+Underfull \hbox (badness 3209) in paragraph at lines 36--37
 \OT1/cmr/m/n/10 management is ex-tremely well-suited for the
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 35--36
+Underfull \hbox (badness 1472) in paragraph at lines 36--37
 \OT1/cmr/m/n/10 Sec-tion 4 re-counts the tech-no-log-i-cal ap-proach
  []
 
@@ -527,87 +531,124 @@ Underfull \hbox (badness 1472) in paragraph at lines 35--36
 <zergling.png, id=13, 120.45pt x 120.45pt>
 File: zergling.png Graphic file (type png)
  <use zergling.png>
-Package pdftex.def Info: zergling.png used on input line 40.
+Package pdftex.def Info: zergling.png used on input line 41.
 (pdftex.def)             Requested size: 113.81102pt x 113.8148pt.
 
 <zealot.png, id=14, 120.45pt x 120.45pt>
 File: zealot.png Graphic file (type png)
  <use zealot.png>
-Package pdftex.def Info: zealot.png used on input line 47.
+Package pdftex.def Info: zealot.png used on input line 48.
 (pdftex.def)             Requested size: 113.81102pt x 113.8148pt.
 
 <marine.png, id=15, 120.45pt x 120.45pt>
 File: marine.png Graphic file (type png)
  <use marine.png>
-Package pdftex.def Info: marine.png used on input line 54.
+Package pdftex.def Info: marine.png used on input line 55.
 (pdftex.def)             Requested size: 113.81102pt x 113.8148pt.
 
-Underfull \hbox (badness 1173) in paragraph at lines 64--65
+Underfull \hbox (badness 1173) in paragraph at lines 65--66
 \OT1/cmr/m/n/10 en-able gath-er-ing more re-sources and con-
  []
 
+<sparcraft.png, id=16, 1286.8075pt x 746.79pt>
+File: sparcraft.png Graphic file (type png)
+ <use sparcraft.png>
+Package pdftex.def Info: sparcraft.png used on input line 81.
+(pdftex.def)             Requested size: 227.62204pt x 132.0918pt.
+
+Overfull \hbox (7.34842pt too wide) in paragraph at lines 81--82
+ [] 
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 88--89
+\OT1/cmr/m/n/10 ab-stract com-bat sim-u-la-tor writ-ten by David
+ []
+
 [2 <./zergling.png> <./zealot.png> <./marine.png>]
-<techStack.png, id=23, 297.11pt x 580.1675pt>
+<techStack.png, id=25, 297.11pt x 580.1675pt>
 File: techStack.png Graphic file (type png)
  <use techStack.png>
-Package pdftex.def Info: techStack.png used on input line 87.
+Package pdftex.def Info: techStack.png used on input line 95.
 (pdftex.def)             Requested size: 113.81102pt x 222.23645pt.
 
-<deploymentZones.png, id=25, 581.17125pt x 358.33875pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<deploymentZones.png, id=26, 581.17125pt x 358.33875pt>
 File: deploymentZones.png Graphic file (type png)
 
 <use deploymentZones.png>
-Package pdftex.def Info: deploymentZones.png used on input line 99.
+Package pdftex.def Info: deploymentZones.png used on input line 107.
 (pdftex.def)             Requested size: 227.62204pt x 140.34753pt.
 
-Overfull \hbox (7.34842pt too wide) in paragraph at lines 99--100
+Overfull \hbox (7.34842pt too wide) in paragraph at lines 107--108
  [] 
  []
 
-<../plots/nnLayout.png, id=26, 552.0625pt x 241.90375pt>
+[3 <./sparcraft.png> <./techStack.png>]
+<../plots/nnLayout.png, id=32, 552.0625pt x 241.90375pt>
 File: ../plots/nnLayout.png Graphic file (type png)
 
 <use ../plots/nnLayout.png>
-Package pdftex.def Info: ../plots/nnLayout.png used on input line 109.
+Package pdftex.def Info: ../plots/nnLayout.png used on input line 117.
 (pdftex.def)             Requested size: 227.62204pt x 99.74222pt.
 
-Overfull \hbox (7.34842pt too wide) in paragraph at lines 109--110
+Overfull \hbox (7.34842pt too wide) in paragraph at lines 117--118
  [] 
- []
-
-[3 <./techStack.png>]
-Underfull \hbox (badness 1418) in paragraph at lines 117--118
-\OT1/cmr/m/n/10 bertaBot[], which is a bot uti-liz-ing BWAPI[].
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4 <./deploymentZones.png> <../plots/nnLayout.png>] [5
 
-] (./paper.aux) ) 
+Underfull \hbox (badness 1418) in paragraph at lines 125--126
+\OT1/cmr/m/n/10 bertaBot[], which is a bot uti-liz-ing BWAPI[].
+ []
+
+[4 <./deploymentZones.png> <../plots/nnLayout.png>]
+<tree.png, id=41, 152.57pt x 233.87375pt>
+File: tree.png Graphic file (type png)
+ <use tree.png>
+Package pdftex.def Info: tree.png used on input line 135.
+(pdftex.def)             Requested size: 113.81102pt x 174.46631pt.
+
+Underfull \vbox (badness 2426) has occurred while \output is active []
+
+ [5 <./tree.png>] <../plots/zerglingHP.png, id=46, 1084.05pt x 361.35pt>
+File: ../plots/zerglingHP.png Graphic file (type png)
+
+<use ../plots/zerglingHP.png>
+Package pdftex.def Info: ../plots/zerglingHP.png used on input line 184.
+(pdftex.def)             Requested size: 469.0pt x 156.33134pt.
+ [6] [7 <../plots/zerglingHP.png>] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 4308 strings out of 493089
- 59401 string characters out of 6134842
- 235398 words of memory out of 5000000
- 7728 multiletter control sequences out of 15000+600000
- 7794 words of font info for 28 fonts, out of 8000000 for 9000
+ 4554 strings out of 493089
+ 63358 string characters out of 6134842
+ 240077 words of memory out of 5000000
+ 7966 multiletter control sequences out of 15000+600000
+ 8403 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,1413b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (5 pages, 185100 bytes).
+ 38i,8n,32p,1411b,267s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmtt8.pfb>
+Output written on paper.pdf (7 pages, 520685 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

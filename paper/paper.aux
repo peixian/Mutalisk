@@ -12,18 +12,28 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Starcraft}{2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textit  {A Marine, the basic Terran infantry unit.}}}{2}}
 \newlabel{fig:marine}{{3}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textit  {A SparCraft simulation of 50 Zerglings vs 50 Zerglings. }}}{3}}
+\newlabel{fig:sparcraft}{{4}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}SparCraft}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textit  {Ultralisk technology stack, scripts run SparCraft combat simulations to generate a training corpus, which is then fed into Glaive. Glaive generates positioning data, which is then fed into Ultralisk, which then is carried out in the Starcraft game itself. }}}{3}}
+\newlabel{fig:techStack}{{5}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Technology Stack}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Overview}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}SparCraft Scripts}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textit  {Ultralisk technology stack, scripts run SparCraft combat simulations to generate a training corpus, which is then fed into Glaive. Glaive generates positioning data, which is then fed into Ultralisk, which then is carried out in the Starcraft game itself. }}}{3}}
-\newlabel{fig:techStack}{{4}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Glaive}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textit  {Zones where the units can be deployed}}}{4}}
-\newlabel{fig:zones}{{5}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \textit  {Glaive has 3 input nodes and 3 output nodes. It reads the tuples of the enemy positions (x, y) for up to 3 enemies, and then generates 3 tuples with the locations of where the ally units should be placed. }}}{4}}
-\newlabel{fig:glaive}{{6}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}SparCraft Scripts}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \textit  {Zones where the units can be deployed, left half is where the script can deploy ally units, right half is where the enemy can deploy its units. }}}{4}}
+\newlabel{fig:zones}{{6}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \textit  {Glaive has 3 input nodes and 3 output nodes. It reads the tuples of the enemy positions (x, y) for up to 3 enemies, and then generates 3 tuples with the locations of where the ally units should be placed. }}}{4}}
+\newlabel{fig:glaive}{{7}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Glaive}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Ultralisk AI}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Technical Approach}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Technical Approach}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Glaive}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Ultralisk AI}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textit  {The traversal tree for the Alpha-Beta algorithm. Each decision is modeled as a box, which each arrow leading to another decision. Ellipses signify subtrees, which are effectively more trees following. The game decisions can be modeled through traversing down this tree as time passes. }}}{5}}
+\newlabel{fig:combatTree}{{8}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The Alpha-Beta algorithm}}{6}}
+\newlabel{fig:alpha-beta}{{9}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textit  {Results of the Starcraft combat. 1000 games were played against each of the three races, which results in the learning of the network. The X axis is the number of data samples the network has been trained on before, and the Y axis is the lowest remaining Zergling HP.}}}{7}}
+\newlabel{fig:results}{{10}{7}}
