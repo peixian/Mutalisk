@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 MAY 2016 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 MAY 2016 20:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -610,16 +610,14 @@ Underfull \hbox (badness 1418) in paragraph at lines 125--126
 <tree.png, id=41, 152.57pt x 233.87375pt>
 File: tree.png Graphic file (type png)
  <use tree.png>
-Package pdftex.def Info: tree.png used on input line 135.
+Package pdftex.def Info: tree.png used on input line 137.
 (pdftex.def)             Requested size: 113.81102pt x 174.46631pt.
-
-Underfull \vbox (badness 2426) has occurred while \output is active []
-
- [5 <./tree.png>] <../plots/zerglingHP.png, id=46, 1084.05pt x 361.35pt>
+ [5 <./tree.png>]
+<../plots/zerglingHP.png, id=46, 1084.05pt x 361.35pt>
 File: ../plots/zerglingHP.png Graphic file (type png)
 
 <use ../plots/zerglingHP.png>
-Package pdftex.def Info: ../plots/zerglingHP.png used on input line 184.
+Package pdftex.def Info: ../plots/zerglingHP.png used on input line 186.
 (pdftex.def)             Requested size: 469.0pt x 156.33134pt.
  [6] [7 <../plots/zerglingHP.png>] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
@@ -629,7 +627,7 @@ Here is how much of TeX's memory you used:
  7966 multiletter control sequences out of 15000+600000
  8403 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,1411b,267s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,32p,1411b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-
@@ -645,7 +643,7 @@ pe1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (7 pages, 520685 bytes).
+Output written on paper.pdf (7 pages, 521050 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
