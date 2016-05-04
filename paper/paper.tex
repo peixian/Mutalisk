@@ -8,6 +8,8 @@
 \usepackage{listings}
 \usepackage{url}
 \usepackage{dblfnote}
+\usepackage{graphicx}
+\usepackage{algorithmicx}
 \setlength{\columnsep}{1cm}
  
 
@@ -22,7 +24,7 @@
 \end{@twocolumnfalse}]
 
 \begin{abstract}
-A major challenge in real-time strategy games is individual unit control, where the player must issue separate orders and deploy units in different places in order to maximize the effectiveness of a single unit. Starcraft: Brood War (henceforth referred to as Starcraft), a real-time strategy game released in 1998 by Blizzard Entertainment, provides a ripe environment for optimization within combat deployment. We present a backpropagation neural network design that hooks into the Alpha-Beta combat algorithm, which then allows an AI to consistently deploy units in a manner to beat the build-in computer AI. 
+A major challenge in real-time strategy games is individual unit control, where the player must issue separate orders and deploy units in different places in order to maximize the effectiveness of a single unit. Starcraft: Brood War (henceforth referred to as Starcraft), a real-time strategy game released in 1998 by Blizzard Entertainment, provides a ripe environment for optimization within combat deployment. We present a backpropagation neural network design that hooks into the Alpha-Beta combat algorithm, which then allows an AI to consistently position units before combat in a manner to beat the build-in computer AI. 
 \end{abstract}
 
 \section{Introduction}
@@ -30,9 +32,31 @@ Micro-management, or the management of units on an individual scale, is an extre
 
 Modern RTS's provide a limited amount of assistance within micro-mangement, commands can be issued en masse to a group of units. However, effective management of units on an individual scale oftentimes lead to a more favorable outcome, such as the technique called Scourage Cloning\footnote{\tiny{\url{http://wiki.teamliquid.net/starcraft/Scourge_Cloning}}}. While players are able to devise complex techniques in order to work around the limitations of Starcraft itself and selectively issue batch commands when necessary, AI playing Starcraft do not have access to the same nuances and quick decision making a player does. Consider the following scenario: a player has a heterogeneous distribution of units, with both units that can only attack within a very small melee range (melee units) and units that attack from a distance (ranged units). A good player would know to place melee units in front of the ranged units in order to maximize combat effectiveness when moving the group, as the ranged units can still fire upon the enenmy when the melee units are attacking the enemy, but the melee units would be blocked behind the ranged units if unit positions were switched around. To an AI, however, this distribution of units looks homogeneous, there is no easy way for the AI to realize that ranged units would be more effective if placed at a distance behind the melee units. 
 
-This combat-oriented domain of micro-management is extremely well-suited for the applications of neural networks, as neural networks can learn the proper positioning of units based upon repeated trials and a large corpus of training data. In this paper we present an application of a neural network trained through backpropagation, over the course of 3000 games an AI properly learns the correct deployment of a small melee unit called the Zergling. In section 2 we discuss some background on Starcraft and SparCraft, a combat simulation program. In section 3 we discuss the technology stack used to enable this neural network and the AI itself, along with introducing our AI called Ultralisk. Section 4 recounts the technological approach to solving the problem, including the topology of the neural network, obtaining training data through SparCraft, and feeding the data into the Alpha-Beta combat algorithm. Section 5 and 6 detail the results of the simulation and experiment trials, along with concluding and discussing the interpretations of the results. 
+This combat-oriented domain of micro-management is extremely well-suited for the applications of neural networks, as neural networks can learn the proper positioning of units based upon repeated trials and a large corpus of training data. In this paper we present an application of a neural network trained through backpropagation, over the course of 3000 games an AI properly learns the correct positioning of a small melee unit called the Zergling. In section 2 we discuss some background on Starcraft and SparCraft, a combat simulation program. In section 3 we discuss the technology stack used to enable this neural network and the AI itself, along with introducing our AI called Ultralisk. Section 4 recounts the technological approach to solving the problem, including the topology of the neural network, obtaining training data through SparCraft, and feeding the data into the Alpha-Beta combat algorithm. Section 5 and 6 detail the results of the simulation and experiment trials, along with concluding and discussing the interpretations of the results. 
 
 \section{Background}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=4cm]{zergling.png}
+	\end{center}
+	\caption{\textit{A Zergling, the basic Zerg infantry unit. }}
+	\label{fig:zergling}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=4cm]{zealot.png}
+	\end{center}
+	\caption{\textit{A Zealot, the basic Protoss infantry unit.}}
+	\label{fig:zealot}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=4cm]{marine.png}
+	\end{center}
+	\caption{\textit{A Marine, the basic Terran infantry unit.}}
+	\label{fig:marine}
+\end{figure}
+\subsection{Starcraft}
 Starcraft is an extremely complex game that has captured an entire country, becoming the first major e-sport. At a high level, Starcraft consists of 3 stages:
 
 \begin{enumerate}
@@ -41,11 +65,58 @@ Starcraft is an extremely complex game that has captured an entire country, beco
   \item Use the accumulated units to engage the enemy units, with the eventual goal of destroying all of the enemy buildings and units. 
 \end{enumerate}
 
+Starcraft is a robust game, consisting of 3 races (called the \textit{Zerg}, the \textit{Protoss}, and the \textit{Terran}), each with their own unique buildings and units. In order to meet the time constraints, we focused the three basic infantry units in particular, each for a single race: 
+
+\begin{enumerate}
+  \item Zerg - Zergling (Figure \ref{fig:zergling}) - A small, melee-ranged, fast-moving unit with 35 health points (HP)
+  \item Protoss - Zealot (Figure \ref{fig:zealot}) - A medium-sized, melee-ranged, moderate-moving unit with 160 HP
+  \item Terran - Marine (Figure \ref{fig:marine}) - A small, ranged, moderate-moving unit with 50 HP
+\end{enumerate}
+
+As these 3 units form the backbone of any army, we felt it was necessary to train the neural network on all 3 units. Due to time constraints, the AI we built (henceforth referred to as Ultralisk) is only able to utilize Zerglings, but can play against any race. 
+
+\subsection{SparCraft}
+
+SparCraft\footnote{\tiny{\url{https://github.com/davechurchill/ualbertabot/wiki/SparCraft-Home}}} is an open source abstract combat simulator written by David Churchill, from the University of Alberta for combat simulations. While it is \textit{not} a Starcraft combat engine, rather, it is able to accurately model unit size, damage, and movement. Because it is able to simulate combat extremely quickly, it was chosen to generate a corpus of training data for the neural network. 
+
+SparCraft runs on a chosen map size, the map size chosen for this experiment was $1280$ x $740$, which creates a grid of 1280 by 740 cells. Each unit occupies 1 grid area, and each unit has a speed per frame. The Zergling for example, can move 1.5 grid points in any direction (it can move across its own cell and half of the next cell), while both the Zealot and the Marine can only move 1 grid point. The Marine, however, can begin attacking a target 4 cells away, while both the Zergling and Zealot can only attack units in the cell directly next to them. 
 
 \section{Technology Stack}
-\lipsum[3]
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[width=4cm]{techStack.png}
+	\end{center}
+	\caption{\textit{Ultralisk technology stack, scripts run SparCraft combat simulations to generate a training corpus, which is then fed into Glaive. Glaive generates positioning data, which is then fed into Ultralisk, which then is carried out in the Starcraft game itself. }}
+	\label{fig:techStack}
+\end{figure}
+
+\subsection{Overview}
+Ultralisk\footnote{\tiny{\url{https://github.com/peixian/Ultralisk}}} is composed of two parts: 1. Glaive, the neural network that reads training data, and 2. the Ultralisk AI itself. The technology stack is show in figure \ref{fig:techStack}. By scripting SparCraft to generate hundreds of combat scenarios and then filtering those combat scenarios for preferred results, a large training corpus is generated. This training data is then fed into Glaive, which uses backprogagation to train itself. After convergence, the neural network generates data for Ultralisk to follow within its combat algorithm, which then enables Ultralisk to assign optimal unit positions. 
+
+\subsection{SparCraft Scripts}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[width=8cm]{deploymentZones.png}
+	\end{center}
+	\caption{\textit{Zones where the units can be deployed}}
+	\label{fig:zones}
+\end{figure}
+The SparCraft scripts are meant to generate a large training corpus for Glaive to train itself on. In order to accomplish this, the scripts create two zones, shown in figure \ref{fig:zones}. The left, blue zone is where the ally can deploy its 3 Zerglings, while the right, red zone is where the enemy can deploy its choice of units between 3 Zerglings, 3 Zealots, or 3 Marines. The script then runs through 1000 scenarios, randomly generating locations for both the enemy and the ally, and then sets these locations into SparCraft to simulate the combat. If the ally is victorious after the simulation is complete, the script saves both the enemy positions and ally positions into the corpus to be trained on by Glaive later, with the enemy positions being the input (domain) and the ally positions being the target (range).
+
+\subsection{Glaive}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=8cm]{../plots/nnLayout.png}
+	\end{center}
+	\caption{\textit{Glaive has 3 input nodes and 3 output nodes. It reads the tuples of the enemy positions (x, y) for up to 3 enemies, and then generates 3 tuples with the locations of where the ally units should be placed. }}
+	\label{fig:glaive}
+\end{figure}
+Glaive (figure \ref{fig:glaive}) is a neural network with 3 input nodes and 3 output nodes. While we used 100 hidden nodes in 1 hidden layer along with bias nodes, Glaive itself can take any arbitrary amount of hidden nodes. Each input node takes in a tuple of values, $(x_{enemy, i}, y_{enemy, i})$ for each enemy unit $i$, and then generates 3 tuples at the output nodes $(x_{ally, j}, y_{ally, j})$ for each ally unit $j$. After Glaive is trained to convergence, the weights within are saved to be passed into Ultralisk. 
+
+\subsection{Ultralisk AI}
+The Ultralisk AI is a C++ AI forked from UAlbertaBot\footnote{\tiny{\url{https://github.com/davechurchill/ualbertabot}}}, which is a bot utilizing BWAPI\footnote{\tiny{\url{https://github.com/bwapi/bwapi}}}. Rather than implement our own total bot, we decided to fork the UAlbertaBot, since UAlbertaBot was already able to be modified to suit our needs. The Ultralisk AI employs a heuristic search method in order to achieve a list of goals, which in our case was to gather resources to continue spawning Zerglings indefinitely. It also employs a multi-unit path finding algorithm, where each cell in a map is seperated into traversable or non-traversable, and multiple agents are created to determine the optimal path to a target, using flood-fill based implementation. BWAPI provides all the necessary hooks for the Ultralisk AI to 
+
 \section{Technical Approach}
-\lipsum[3]
 \section{Results}
 \lipsum[3]
 \section{Conclusions}
